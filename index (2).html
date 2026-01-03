@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor'Hijab | La lumière de l'élégance</title>
+    <meta name="description" content="Noor'Hijab : Voiles chic, confortables et accessibles pour toutes les femmes. Commandez via WhatsApp dès maintenant.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --or: #d4af37;
+            --noir: #1a1a1a;
+            --beige: #faf7f2;
+            --vert-whatsapp: #25D366;
+        }
+
+        .logo-text {
+           font-family: 'Playfair Display', serif; /* même police que le logo stylisé */
+           font-weight: 700; /* ou 400 si tu veux plus fin */
+           font-size: 1.8rem;
+           margin-left: 10px;
+           color: var(--noir);
+           vertical-align: middle;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            background: #fff;
+        }
+
+        a { text-decoration: none; }
+
+        /* Navigation */
+        header {
+            background: #fff;
+            padding: 0.8rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--noir);
+            font-weight: 700; /* Mettre en gras */
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--or); }
+
+        /* Hero */
+        .hero {
+            background: var(--beige);
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--noir);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn-cta {
+            background: var(--or);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        .hero .btn-cta:hover {
+            background: #b9952a;
+            box-shadow: 0 5px 15px rgba(212,175,55,0.3);
+        }
+
+        /* Section Boutique */
+        .shop-section {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 8px 20px;
+            border: 1px solid var(--noir);
+            border-radius: 50px;
+            background: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background: var(--or);
+            color: #fff;
+            border-color: var(--or);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            padding-bottom: 25px;
+        }
+
+        .product-card:hover { transform: translateY(-10px); }
+
+        .product-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .price {
+            color: var(--or);
+            font-weight: bold;
+            font-size: 1.4rem;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .btn-whatsapp {
+            background: var(--vert-whatsapp);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* À Propos */
+        .about {
+            background: #fff;
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+            padding: 25px;
+            background: var(--beige);
+            border-radius: 15px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--noir);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        footer a { color: var(--or); transition: 0.3s; }
+        footer a:hover { color: #fff; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 1rem; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; font-size: 0.8rem; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="img/LogoNoorhijab.png" alt="Logo Noor'Hijab">
+        </div>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#shop">Collection</a>
+            <a href="#about">À propos</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Noor'Hijab, La lumière de l'élégance au quotidien</h1>
+        <p>Par Ndeye Aissatou DIAGNE</p>
+        <a href="#shop" class="btn-cta">Découvrir la collection</a>
+    </section>
+
+    <!-- Boutique -->
+    <section class="shop-section" id="shop">
+        <h2 class="section-title">Nos Voiles</h2>
+
+        <!-- Catégories -->
+        <div class="categories">
+            <button class="category-btn active" data-cat="all">Tout</button>
+            <button class="category-btn" data-cat="voiles">Voiles</button>
+            <button class="category-btn" data-cat="bonnets">Bonnets</button>
+            <button class="category-btn" data-cat="accessoires">Accessoires</button>
+        </div>
+
+        <div class="products-grid">
+            <!-- Produit 1 -->
+            <div class="product-card" data-cat="voiles">
+                <img src="img/Mousseline.jpg" class="product-img" alt="Voile Mousseline beige">
+                <h3>Voile Mousseline</h3>
+                <span class="price">1 500 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le voile Mousseline" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+            <!-- Produit 2 -->
+            <div class="product-card" data-cat="voiles">
+                <img src="img/Jazz.jpg" class="product-img" alt="Voile Jazz couleur rose">
+                <h3>Voile Jazz</h3>
+                <span class="price">2 000 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le voile Jazz" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+            <!-- Produit 3 -->
+            <div class="product-card" data-cat="voiles">
+                <img src="img/Jersey.jpg" class="product-img" alt="Voile Jersey noir">
+                <h3>Voile Jersey</h3>
+                <span class="price">1 500 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le voile Jersey" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+            <div class="product-card" data-cat="voiles">
+                <img src="img/Pashmina.jpg" class="product-img" alt="Voile Pashmna rose">
+                <h3>Voile Pashmina</h3>
+                <span class="price">3 000 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le voile Pashmina" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+            <div class="product-card" data-cat="voiles">
+                <img src="img/Khimar.jpg" class="product-img" alt="Voile Khimar noir">
+                <h3>Voile Khimar</h3>
+                <span class="price">Coming soon</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le voile Khimar" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+            <!-- Produit 4 -->
+            <div class="product-card" data-cat="bonnets">
+                <img src="img/Bonnet.jpg" class="product-img" alt="Bonnet hijab blanc">
+                <h3>Bonnet Hijab</h3>
+                <span class="price">250 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le bonnet hijab" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+             <div class="product-card" data-cat="bonnets">
+                <img src="img/Cagoule.jpg" class="product-img" alt="Bonnet cagoule blanc">
+                <h3>Cagoule Hijab</h3>
+                <span class="price">Coming soon</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander le bonnet cagoule" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+            <!-- Produit 5 -->
+            <div class="product-card" data-cat="accessoires">
+                <img src="img/Accessoire.jpg" class="product-img" alt="Accessoire voile">
+                <h3>Accessoire</h3>
+                <span class="price">500 F CFA à 1 500 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander un accessoire" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+             <div class="product-card" data-cat="accessoires">
+                <img src="img/Compteur+chapelet.jpg" class="product-img" alt="Accessoire voile">
+                <h3>Compteur et chapelet</h3>
+                <span class="price">1 500 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander un compteur et chapelet" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+             <div class="product-card" data-cat="accessoires">
+                <img src="img/Compteur.jpg" class="product-img" alt="Accessoire voile">
+                <h3>Compteur</h3>
+                <span class="price">500 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander un compteur" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+
+             <div class="product-card" data-cat="accessoires">
+                <img src="img/Musc.jpg" class="product-img" alt="Accessoire voile">
+                <h3>Musc tahara</h3>
+                <span class="price">1 250 F CFA</span>
+                <a href="https://wa.me/221787056433?text=Bonjour, je souhaite commander un musc" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Commander
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="about" id="about">
+        <h2 class="section-title">À Propos de nous</h2>
+        <p><strong>Noor'Hijab</strong> est née d'une envie simple: offrir des voiles élégants, confortables et accessibles à toutes les femmes. Inspirée par la lumière (An Noor), chaque voile est pensée pour sublimer le quotidien avec style et douceur.</p>
+        
+        <div class="contact-info">
+            <p><strong><i class="fas fa-user"></i> Gérante :</strong> Nd'Aissatou DIAGNE</p>
+            <p><strong><i class="fas fa-phone"></i> Contact commercial :</strong> <a href="tel:+221787056433">+221 78 705 64 33</a></p>
+            <p><strong><i class="fas fa-location-dot"></i> Adresse :</strong> Dakar, Rufisque, Sénégal</p>
+            <p><strong><i class="fab fa-instagram"></i> Instagram :</strong> <a href="#">@NoorHijab</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Noor'Hijab - Créé avec élégance, amour et pour aider les femmes dans la recherche de voile adapté à leur quotidien. | <a href="#">Instagram</a> | <a href="#">WhatsApp</a></p>
+    </footer>
+
+    <!-- Script filtrage catégories -->
+    <script>
+        const buttons = document.querySelectorAll('.category-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const cat = btn.dataset.cat;
+                products.forEach(prod => {
+                    if(cat === 'all' || prod.dataset.cat === cat) {
+                        prod.style.display = 'block';
+                    } else {
+                        prod.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
